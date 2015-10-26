@@ -1,1 +1,5 @@
+# Noel Neri
+# BA1 2015-2016
+# Programmation - Projet 1
+
 __import__("random").seed(int(input("Entrez la seed: "))),(lambda h:print("Temps total travaillé : %d h %02d min"%(h//60,h%60)))((lambda f,*a:f(f,*a))(lambda l,u,v=0,p=0,w=0,z=lambda u:"%02d:%02d"%(u//60+9,u%60),y=lambda u,s,z:print("%s\t%s"%(z(u),s))or 0,r=__import__("random").randint:y(0,"Gaston arrive au bureau",z)+l(l,0)if u<0else y(u,"Fin du service, dure journée",z)if u>539else w+l(l,u+1,v-1,p-1,w)if v>0else y(u,"Prunelle est parti. \\O/",z)+l(l,u)if w else(y(u,"Il faut travailler. M'enfin.",z)+l(l,u,p+90,p,1)if p<20else y(u,"C'est bon, encore le temps de faire une sieste. Zzz",z)+l(l,u,20,p))if p>0else y(u,"OK, Pause !",z)+(l(l,u,50,p)if p>0else l(l,u,50)if r(0,2)else(lambda x:y(u,"Attention, Prunelle arrive à %s"%z(x+u),z)+l(l,u,50,x))(r(60,110))),-1))
