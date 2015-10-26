@@ -26,26 +26,26 @@ def entree(valeur,default,mini='',maxi=''):
     return ret
 
 def deformation(p,c,r):
-   """reçoit le point p =(x_p,y_p,z_p), le centre c=(x_c,y_c,z_c),
-   et le rayon r tout les trois avant déformation,
-   revoit un point p2 après déformation
-   """
-   def distance(p,q):
-      """distance entre les 2 points p et q"""
-      return ((q[0]-p[0])**2 + (q[1]-p[1])**2 + (q[2]-p[2])**2)**0.5
-   d = distance(p,c)
-   if d >= r:
-      res = p
-   else:
-      if d > EPS:
+    """reçoit le point p =(x_p,y_p,z_p), le centre c=(x_c,y_c,z_c),
+    et le rayon r tout les trois avant déformation,
+    revoit un point p2 après déformation
+    """
+    def distance(p,q):
+        """distance entre les 2 points p et q"""
+        return ((q[0]-p[0])**2 + (q[1]-p[1])**2 + (q[2]-p[2])**2)**0.5
+    d = distance(p,c)
+    if d >= r:
+        res = p
+    else:
+        if d > EPS:
          facteur = r/d
-      else:
+        else:
          facteur = 1
-      x2 = c[0] + (p[0]-c[0]) * facteur
-      y2 = c[1] + (p[1]-c[1]) * facteur
-      z2 = c[2] + (p[2]-c[2]) * facteur
-      res = (x2,y2,z2)
-   return res
+        x2 = c[0] + (p[0]-c[0]) * facteur
+        y2 = c[1] + (p[1]-c[1]) * facteur
+        z2 = c[2] + (p[2]-c[2]) * facteur
+        res = (x2,y2,z2)
+    return res
 deform = lambda p: deformation(p,centre,r) #définition de la fonction deform envoyée à pavage
 
 def hexagone(t, c, longueur, col1, col2, col3, deform):
